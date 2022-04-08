@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Card Web Components</title>
+    <!-- scripts -->
+    <script src="./components/profile-card.js"></script>
+    <style>
+          :root{
+            --profile-card-image: url(./components/images/img.jpeg);
+            }
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+        min-height: 100vh;
+        background-color: #e2ebee;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+
+        .container {
+          display: flex;
+          flex-direction: row;
+          height: 100vh;
+          width: 100vw;
+        }
+        .component-container {
+          padding: 2rem;
+          margin: 1rem;
+          width: fit-content;
+          height: fit-content;
+        }
+      </style>
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  </head>
+
+  <body>
+    <div class="component-container">
+        <profile-card  
+        name='Anita Bath'
+        title="UX/UI Frontend Developer"
+        avatar="https://randomuser.me/api/portraits/women/2.jpg"
+        post="78"
+        likes="67"
+        comments="430"
+        />
+    </div>
+    <div class="component-container">
+        <profile-card 
+         name='John Doe' 
+         title="Web Design"
+         avatar="https://randomuser.me/api/portraits/men/1.jpg"
+         post="90"
+         likes="34"
+         comments="230"
+         />
+    </div>
+  </body>
+</html>
